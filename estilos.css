@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+    box-sizing: border-box;
+}
+.cabecera{
+    background-color: #0A0A0A;
+    text-align: center;
+}
+.titulo-h1{
+    font-size: 100px;
+    font-weight: bold;
+    padding: 10px;
+}
+.texto-cabecera{
+    background-color: #121212;
+    font-style: italic;
+    font-size: 30px;
+    padding: 30px;
+    margin-bottom: 0;
+}
+main{
+    flex: 1;
+}
+footer{
+    padding: 20px;
+    background-color: #121212;
+    font-size: 15px;
+    bottom: 0;
+    text-align: center;
+    margin-top: 10px;
+}
+footer p{
+    font-size: 12px;
+    font-style: italic;
+    font-weight: bold;
+}
+nav{
+    background-color: #010111;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+
+}
+ul{
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+}
+li{
+    padding: 20px;
+    padding-left: 50px;
+}
+.enlaces-menu{
+    text-decoration: none;
+    color: white;
+    transition: font-size 1s;
+}
+.enlaces-menu:hover{
+    color: wheat;
+    font-size: 25px;
+}
+
+/*
+    ESTILOS PÁGINA PRINCIPAL
+*/
+.contenedor-imagen-paginaInicio{
+    display: flex;
+    margin: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.contenedor-imagen-paginaInicio img{
+    max-width: 540px;
+    max-height: 540px;
+    border-radius: 10px;
+    filter: brightness(0.5);
+}
+.contenedor-excelencia{
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 10px;
+}
+.texto-excelencia{
+    font-size: 45px;
+    font-weight: bold;
+}
+.texto-autor-excelencia{
+    font-size: 15px;
+    font-style: italic;
+}
+.contenedor-paginaInicio{
+    background-color: #0f0703;
+    margin-top: 20px;
+}
+.contenedor-texto-paginaInicio{
+    display: flex;
+    font-family: Lexend;
+    justify-content: space-between;
+}
+.parrafo-texto-paginaInicio{
+    padding: 30px;
+}
