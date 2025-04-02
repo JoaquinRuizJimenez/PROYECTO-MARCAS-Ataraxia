@@ -109,3 +109,226 @@ li{
 .parrafo-texto-paginaInicio{
     padding: 30px;
 }
+
+/*ESTILOS PÁGINA EJERCICIOS*/
+.contenedor-navegacion-ejercicios {
+    background-color: #1a1b25;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    min-height: 500px;
+    min-width: 400px;
+    margin-bottom: 50px;
+}
+.input-navegacion-ejercicios{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.texto-cabecera-ejercicios{
+    background-color: #1a1b25;
+    font-style: italic;
+    font-size: 30px;
+    padding: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.contenedor-buscador-ejercicios{
+    width: 30%;
+    background: #25153f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    bottom: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+.texto-buscador-ejercicios{
+    color: #f0f2a6;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor-contenido-ejercicios{
+    width: 70%;
+    margin-left: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-ejercicio-ejercicios{
+    background-color: #f0f2a6;
+    border-radius: 5px;
+    min-height: 75px;
+    min-width: 100px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+/*ESTILOS PÁGINA rutinas*/
+.contenedor-navegacion-rutinas{
+    background-color: #373F51;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    min-height: 500px;
+    min-width: 400px;
+    margin-bottom: 50px;
+}
+.input-navegacion-rutinas{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.texto-cabecera-rutinas{
+    background-color: #373F51;
+    font-style: italic;
+    font-size: 30px;
+    padding: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.contenedor-buscador-rutinas{
+    width: 30%;
+    background: #58A4B0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    bottom: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+.texto-buscador-rutinas{
+    color: #A9BCD0;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor-contenido-rutinas{
+    width: 70%;
+    margin-left: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-ejercicio-rutinas{
+    background-color: #A9BCD0;
+    border-radius: 5px;
+    min-height: 75px;
+    min-width: 100px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+/*ESTILOS PÁGINA alimentación*/
+.contenedor-navegacion-alimentacion{
+    background-color: #301014;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    min-height: 500px;
+    min-width: 400px;
+    margin-bottom: 50px;
+}
+.input-navegacion-alimentacion{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 80%;
+    margin-bottom: 10px;
+}
+.texto-cabecera-alimentacion{
+    background-color: #301014;
+    font-style: italic;
+    font-size: 30px;
+    padding: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+.contenedor-buscador-alimentacion{
+    width: 30%;
+    background: #51291E;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    bottom: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+.texto-buscador-alimentacion{
+    color: #79B791;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.contenedor-contenido-alimentacion{
+    width: 70%;
+    margin-left: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-receta-alimentacion{
+    background-color: #79B791;
+    border-radius: 5px;
+    min-height: 75px;
+    min-width: 100px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+/*ESTILOS Sobre Nosotros*/
+    .contenedor-excelencia-sobrenosotros{
+    background-color: #141414;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    }
+    .texto-excelencia-sobrenosotros{
+        font-size: 30px;
+        font-weight: bold;
+    }
+    .nombre {
+        margin-top: 10px;
+        font-size: 30px;
+        font-weight: bold;
+        color: white;
+        text-align: center;
+    }
+    .mapa {
+      margin-top: 10px;
+      width: 100%;
+      height: 300px; 
+      text-align: center;
+    }
