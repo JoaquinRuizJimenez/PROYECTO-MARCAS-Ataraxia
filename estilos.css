@@ -327,8 +327,11 @@ li{
         text-align: center;
     }
     .mapa {
-      margin-top: 10px;
-      width: 100%;
-      height: 300px; 
       text-align: center;
+      margin: 20px;
+      margin-top: 30px;
+    }
+    .mapa iframe{
+        width: 1000px;
+        height: 650px;
     }
