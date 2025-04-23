@@ -1,0 +1,525 @@
+[
+
+    {
+        "Nombre": "Curl de bíceps con mancuernas",
+        "GrupoMuscular":["Biceps"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Curl de bíceps con barra",
+        "GrupoMuscular":["Biceps"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 3
+    }
+    ,
+    {
+        "Nombre": "Curl martillo",
+        "GrupoMuscular":["Biceps"],
+        "Series": 3,
+        "Repeticiones": 12,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Curl predicador",
+        "GrupoMuscular":["Biceps", "Antebrazos"],
+        "Series": 4,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Curl en polea",
+        "GrupoMuscular":["Biceps"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Curl concentrado",
+        "GrupoMuscular":["Biceps"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Curl en polea alta",
+        "GrupoMuscular":["Biceps"],
+        "Series": 4,
+        "Repeticiones": 12,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Curl en polea baja",
+        "GrupoMuscular":["Biceps"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Fondos",
+        "GrupoMuscular":["Triceps", "Deltoide anterior", "Pecho"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Extensión de triceps en polea",
+        "GrupoMuscular":["Triceps"],
+        "Series": 3,
+        "Repeticiones": 12,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Press frances con mancuernas",
+        "GrupoMuscular":["Triceps"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Extensión de triceps con mancuerna",
+        "GrupoMuscular":["Triceps"],
+        "Series": 2,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Press frances con barra",
+        "GrupoMuscular":["Biceps"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Fondos en banco",
+        "GrupoMuscular":["Triceps", "Deltoide anterior","Pecho"],
+        "Series": 3,
+        "Repeticiones": 20,
+        "Descanso": 1.5
+    },
+    {
+        "Nombre": "Dominadas con agarre prono",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2.5
+    }
+    ,
+    {
+        "Nombre": "Dominadas con agarre supino",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 12,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Dominadas con agarre neutro",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 6,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Jalón al pecho con agarre prono",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 4,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Jalón al pecho con agarre supino",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Jalón al pecho con agarre neutro",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Dominadas asistidas",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 4,
+        "Repeticiones": 12,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Remo unilateral con mancuerna",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos","Deltoide posterior"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Remo en polea",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos","Deltoide posterior"],
+        "Series": 2,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Remo en barra",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos","Deltoide posterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Remo en máquina",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos","Deltoide posterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Remo en barra T",
+        "GrupoMuscular":["Espalda","Biceps","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 1.5
+    },
+    {
+        "Nombre": "Vuelos invertidos en máquina",
+        "GrupoMuscular":["Espalda", "Trapecios","Deltoide posterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Encogimientos",
+        "GrupoMuscular":["Espalda", "Trapecios","Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 20,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Press banca",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Press inclinado con barra",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Press inclinado con mancuernas",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Press declinado",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 4,
+        "Repeticiones": 12,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Press plano en máquina",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Press inclinado en máquina",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 2,
+        "Repeticiones": 8,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Press plano con mancuernas",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Flexiones",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 15,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Flexiones inclinadas",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 20,
+        "Descanso": 1.5
+    },
+    {
+        "Nombre": "Flexiones declinadas",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Flexiones en diamante",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Flexiones abiertas",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 1
+    },
+    {
+        "Nombre": "Flexiones de arquero",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Vuelos en máquina",
+        "GrupoMuscular":["Pecho","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Vuelos con mancuernas",
+        "GrupoMuscular":["Pecho","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 14,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Press banca",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Press militar con mancuernas",
+        "GrupoMuscular":["Deltoide anterior","Deltoide lateral","Triceps"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3.5
+    },
+    {
+        "Nombre": "Elevaciones laterales con mancuernas",
+        "GrupoMuscular":["Deltoide lateral","Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Elevaciones laterales en polea",
+        "GrupoMuscular":["Deltoide anterior","Deltoide lateral"],
+        "Series": 2,
+        "Repeticiones": 8,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Press militar con barra",
+        "GrupoMuscular":["Deltoide anterior","Deltoide lateral","Triceps"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3.5
+    },
+    {
+        "Nombre": "Elevaciones frontales",
+        "GrupoMuscular":["Deltoide anterior"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Sentadilla libre",
+        "GrupoMuscular":["Cuadriceps","Gluteo"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Prensa",
+        "GrupoMuscular":["Isquiotibiales","Cuadriceps","Gluteo"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Elevacion de talón",
+        "GrupoMuscular":["Gemelos"],
+        "Series": 3,
+        "Repeticiones": 20,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Elevacion de talón en máquina",
+        "GrupoMuscular":["Gemelos"],
+        "Series": 3,
+        "Repeticiones": 15,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Sentadilla bulgara",
+        "GrupoMuscular":["Gluteo","Cuadriceps","Isquiotibiales"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Extensión de cuadriceps",
+        "GrupoMuscular":["Cuadriceps"],
+        "Series": 2,
+        "Repeticiones": 10,
+        "Descanso": 4
+    },
+    {
+        "Nombre": "Extensión de isquiotibiales",
+        "GrupoMuscular":["Isquiotibiales"],
+        "Series": 3,
+        "Repeticiones": 12,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Burpees",
+        "GrupoMuscular":["Pecho","Triceps","Deltoide anterior","Cuadriceps","Femoral","Gemelos","Core","Gluteo"],
+        "Series": 3,
+        "Repeticiones": 25,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Sit ups",
+        "GrupoMuscular":["Core"],
+        "Series": 2,
+        "Repeticiones": 20,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Plancha isométrica",
+        "GrupoMuscular":["Core","Oblicuos"],
+        "Series": 3,
+        "Repeticiones": 1,
+        "Descanso": 1
+    },
+    {
+        "Nombre": "Elevacion de piernas",
+        "GrupoMuscular":["Core"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Bicicleta",
+        "GrupoMuscular":["Core"],
+        "Series": 2,
+        "Repeticiones": 25,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Elevacion de piernas colgado",
+        "GrupoMuscular":["Core"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Crunch en polea alta",
+        "GrupoMuscular":["Core","Oblicuos"],
+        "Series": 3,
+        "Repeticiones": 8,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "In and outs",
+        "GrupoMuscular":["Core"],
+        "Series": 3,
+        "Repeticiones": 15,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Dragon flag",
+        "GrupoMuscular":["Core","Oblicuos"],
+        "Series": 2,
+        "Repeticiones": 1,
+        "Descanso": 5
+    },
+    {
+        "Nombre": "Bandera humana",
+        "GrupoMuscular":["Core","Oblicuos"],
+        "Series": 3,
+        "Repeticiones": 1,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "L-Sit",
+        "GrupoMuscular":["Core"],
+        "Series": 3,
+        "Repeticiones": 20,
+        "Descanso": 2.5
+    },
+    {
+        "Nombre": "Giros rusos",
+        "GrupoMuscular":["Core","Oblicuos"],
+        "Series": 3,
+        "Repeticiones": 20,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Flexion de muñeca con mancuerna",
+        "GrupoMuscular":["Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 14,
+        "Descanso": 2
+    },
+    {
+        "Nombre": "Flexion de muñeca con barra",
+        "GrupoMuscular":["Antebrazos"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    },
+    {
+        "Nombre": "Vuelos invertidos en máquina",
+        "GrupoMuscular":["Espalda", "Trapecios","Deltoide posterior"],
+        "Series": 3,
+        "Repeticiones": 10,
+        "Descanso": 3
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+]

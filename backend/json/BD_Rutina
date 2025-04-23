@@ -1,0 +1,64 @@
+[
+    {
+        "nombre": "Full body (principiantes)",
+        "dias/semana": 3,
+        "duracion": 90,
+        "descripcion": "Entrenamiento de cuerpo completo para principiantes. Incluye ejercicios básicos de fuerza y resistencia"
+    },
+    {
+        "nombre":"Full body (experto)",
+        "dias/semana": 3,
+        "duracion": 90,
+        "descripcion": "Un entrenamiento con pesos bajos y altas repeticiones. Simple pero realmente efectivo para el desarrollo muscular"
+    },
+    {
+        "nombre":"PPL (Push, pull, legs)",
+        "dias/semana": 6,
+        "duracion": 90,
+        "descripcion": "Entrenamiento en base a grupos musculares. Se entrena un grupo muscular por día, alternando entre empuje, tirón y piernas"
+    },
+    {
+        "nombre":"Upper/Lower",
+        "dias/semana": 4,
+        "duracion": 90,
+        "descripcion": "Entrenar parte superior e inferior del cuerpo en días alternos, dejando un dia de descanso entre vuelta. Ideal para quienes buscan un equilibrio entre fuerza y resistencia"
+    },
+    {
+        "nombre":"Arnold split",
+        "dias/semana": 6,
+        "duracion": 90,
+        "descripcion": "Pecho/espalda, brazo completo y piernas. Ideal para quienes buscan tener grandes y fuertes brazos"
+    },
+    {
+        "nombre":"Rutina HIIT",
+        "dias/semana": 4,
+        "duracion": 25,
+        "descripcion": "Ideal para quienes buscan quemar grasa y mejorar la resistencia cardiovascular. Incluye ejercicios de alta intensidad con poco descanso entre series"
+    },
+    {
+        "nombre":"Weider split",
+        "dias/semana": 5,
+        "duracion": 60,
+        "descripcion": "Un clasico entre los culturistas. Se entrena un grupo muscular por día, permitiendo un enfoque más específico en cada uno"  
+    }
+    ,
+    {
+        "nombre":"The Texas Method",
+        "dias/semana": 3,
+        "duracion": 60,
+        "descripcion": "Creada por Mark Rippetoe, esta rutina se basa en el principio de un entreno de volumen, uno ligero y uno de fuerza."
+    }
+    ,
+    {
+        "nombre":"GVT (German Volume Training)",
+        "dias/semana": 5,
+        "duracion": 75,
+        "descripcion": "Entrenamiento de volumen alemán. Se basa en realizar 10 series de 10 repeticiones con un peso moderado para cada ejercicio. Ideal para aumentar la masa muscular"
+    },
+    {
+        "nombre":"Madcow 5x5",
+        "dias/semana": 3,
+        "duracion": 60,
+        "descripcion": "Una rutina de fuerza que se basa en el principio de 5 series de 5 repeticiones con un peso progresivo. Ideal para quienes buscan aumentar su fuerza máxima"
+        }
+]
