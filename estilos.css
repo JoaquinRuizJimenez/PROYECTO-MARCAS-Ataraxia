@@ -1,93 +1,228 @@
-body{
+/*Estilos generales*/
+* {
     margin: 0;
-    min-height: 100vh;
-    display: flex;
-    border-collapse: collapse;
-    font-family: sans-serif;
-    background-color: black;
-    color: white;
-    flex-direction: column;
+    padding: 0;
     box-sizing: border-box;
 }
-.cabecera{
-    background-color: #0A0A0A;
-    text-align: center;
-}
-.titulo-h1{
-    font-size: 100px;
-    font-weight: bold;
-    padding: 10px;
-}
-.texto-cabecera{
-    background-color: #121212;
-    font-style: italic;
-    font-size: 30px;
-    padding: 30px;
-    margin-bottom: 0;
-}
-main{
-    flex: 1;
-}
-footer{
-    padding: 20px;
-    background-color: #121212;
-    font-size: 15px;
-    bottom: 0;
-    text-align: center;
-    margin-top: 10px;
-}
-footer p{
-    font-size: 12px;
-    font-style: italic;
-    font-weight: bold;
-}
-nav{
-    background-color: #010111;
+
+header nav{
+    background-color: #2c3e50;
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
     font-size: 20px;
     color: white;
 
 }
-ul{
+
+header nav ul{
     list-style: none;
     justify-content: center;
     text-align: center;
     display: flex;
 }
-li{
-    padding: 20px;
+
+header nav li{
+    padding: 30px;
     padding-left: 50px;
 }
+
 .enlaces-menu{
     text-decoration: none;
     color: white;
     transition: font-size 1s;
 }
+
 .enlaces-menu:hover{
     color: wheat;
     font-size: 25px;
 }
 
-/*
-    ESTILOS PÁGINA PRINCIPAL
-*/
-.contenedor-imagen-paginaInicio{
+
+/* Estilo del encabezado */
+
+header {
+    text-align: center;
+    background-color: #2c3e50;
+    color: white;
+    padding: 30px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+main{
+    flex: 1;
+}
+
+
+/* Estilos para el pie de página */
+footer {
+    display: flex; /* Flexbox para dividir el footer en dos partes */
+    justify-content: space-between; /* Distribuye el contenido en los dos extremos */
+    align-items: flex-start; /* Alinea las columnas al principio */
+    padding: 10px; /* Menos padding para reducir la altura total */
+    background-color: #2c3e50;
+    color: white;
+    margin-top: 30px;
+    border-radius: 10px;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten si la pantalla es pequeña */
+    height: auto; /* Permite que el footer se ajuste automáticamente */
+}
+
+/* Divisiones del footer */
+.footer-left, .footer-right {
+    width: 48%; /* Cada columna ocupará el 48% del ancho del footer */
+    padding: 5px; /* Menos padding para reducir altura */
+}
+
+/* Centrado del formulario en el lado izquierdo */
+.footer-left {
     display: flex;
-    margin: 20px;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: center; /* Centra el formulario verticalmente */
+    align-items: center; /* Centra el formulario horizontalmente */
+    height: 100%; /* Asegura que la columna ocupe toda la altura disponible */
+}
+
+.footer-left h3 {
+    font-size: 1.2rem; /* Título más pequeño */
+    margin-bottom: 10px; /* Menos espacio entre el título y el formulario */
+}
+
+.footer-left form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px; /* Menos espacio entre los campos */
+    width: 100%;
+    max-width: 450px; /* Limita el tamaño máximo del formulario */
+    padding: 20px; /* Agrega un poco de padding para hacer que se vea más espacioso */
+    background-color: #1e364e; /* Fondo oscuro para resaltar el formulario */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra suave para darle profundidad */
+}
+
+.footer-left label {
+    font-size: 0.9rem; /* Etiquetas más pequeñas */
+}
+
+.footer-left input, .footer-left textarea {
+    padding: 6px; /* Menos padding para hacer los campos más compactos */
+    font-size: 0.9rem; /* Reducir el tamaño de la fuente */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 95%;
+    background-color: #15406b; /* Fondo oscuro para los campos */
+    color: #ecf0f1; /* Texto claro en los campos */
+}
+
+.footer-left textarea {
+    resize: none; /* Desactiva la opción de redimensionar el textarea */
+}
+
+.footer-left button[type="submit"] {
+    padding: 8px 15px; /* Botón más pequeño */
+    background-color: #375cd6; /* Un verde-azul claro para el botón */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Texto más pequeño */
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón */
+}
+
+/* Estilo para el botón de Borrar */
+.footer-left button[type="reset"] {
+    background-color: #e74c3c; /* Color rojo para el botón de borrar */
+    padding: 8px 15px; /* Botón más pequeño */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem; /* Texto más pequeño */
+    transition: background-color 0.3s ease;
+    align-self: center; /* Centra el botón */
+}
+
+.footer-left button[type="submit"]:hover {
+    background-color: #16a085; /* Cambio de color cuando pasa el mouse por encima */
+}
+
+/* Efecto de hover para el botón de Borrar */
+.footer-left button[type="reset"]:hover {
+    background-color: #c0392b; /* Cambio de color cuando pasa el mouse por encima */
+}
+/* Estilo para la columna derecha */
+.footer-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra el contenido verticalmente */
+    align-items: center; /* Centra el contenido horizontalmente */
+    text-align: center;
+    padding-top: 100px;
+}
+
+/* Estilo para la imagen del footer */
+.footer-logo {
+    width: 200px; /* Imagen más pequeña */
+    height: auto;
+    margin-bottom: 15px; /* Menos espacio entre la imagen y el resto del contenido */
+}
+
+/* Enlaces y derechos reservados */
+.footer-links {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 }
-.contenedor-imagen-paginaInicio img{
-    max-width: 540px;
-    max-height: 540px;
-    border-radius: 10px;
-    filter: brightness(0.5);
+
+.footer-right a {
+    color: #ecf0f1;
+    font-size: 1rem; /* Texto más pequeño */
+    text-decoration: none;
+    margin-bottom: 5px; /* Menos espacio entre el enlace y el texto */
 }
+
+.footer-right a:hover {
+    color: #bdc3c7;
+}
+
+.footer-right p {
+    font-size: 0.8rem; /* Texto más pequeño */
+    color: #bdc3c7;
+}
+
+/*fin estilos generales*/
+
+/*Página principal*/
+#paginaPrincipal{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    color: #333;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('images/95a1ad8e-2540-495b-9a8f-87fc86249caf_1080x1080.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
 .contenedor-excelencia{
-    background-color: #141414;
+    background-color: #2b4764;
     padding: 20px;
     border-radius: 10px;
+    color: white;
 }
 .texto-excelencia{
     font-size: 45px;
@@ -98,8 +233,10 @@ li{
     font-style: italic;
 }
 .contenedor-paginaInicio{
-    background-color: #0f0703;
+    background-color: #20354b;
     margin-top: 20px;
+    color: white;
+    padding: 20px;
 }
 .contenedor-texto-paginaInicio{
     display: flex;
@@ -109,74 +246,26 @@ li{
 .parrafo-texto-paginaInicio{
     padding: 30px;
 }
+/*
+   FIN ESTILOS PÁGINA PRINCIPAL
+*/
 
-/*ESTILOS PÁGINA EJERCICIOS*/
-.contenedor-navegacion-ejercicios {
-    background-color: #1a1b25;
-    color: white;
-    width: 80%;
-    margin-left: 10%;
-    margin-top: 50px;
-    border-radius: 10px;
-    display: flex;
-    min-height: 500px;
-    min-width: 400px;
-    margin-bottom: 50px;
-}
-.input-navegacion-ejercicios{
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid black;
-    width: 80%;
-    margin-bottom: 10px;
-}
-.texto-cabecera-ejercicios{
-    background-color: #1a1b25;
-    font-style: italic;
-    font-size: 30px;
-    padding: 30px;
-    margin-bottom: 0;
-    text-align: center;
-}
-.contenedor-buscador-ejercicios{
-    width: 30%;
-    background: #25153f;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
-    color: white;
-    bottom: 0;
-    border-radius: 10px 0px 0px 10px;
-}
-.texto-buscador-ejercicios{
-    color: #f0f2a6;
-    font-size: 35px;
-    font-weight: bold;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
-.contenedor-contenido-ejercicios{
-    width: 70%;
-    margin-left: 20px;
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
-    gap: 10px;
-    flex-direction: column;
-    align-items: center;
-}
-.contenedor-ejercicio-ejercicios{
-    background-color: #f0f2a6;
-    border-radius: 5px;
-    min-height: 75px;
-    min-width: 100px;
-    padding: 10px;
-    margin: 10px;
-    margin-top: 20px;
-}
 
 /*ESTILOS PÁGINA rutinas*/
+#rutinas{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    color: #333;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('images/201879001-gimnasio-o-fitness-con-fondo-claro-al-atardecer-para-sitio-web-de-plantilla-de-diseño-web.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 .contenedor-navegacion-rutinas{
     background-color: #373F51;
     color: white;
@@ -242,7 +331,106 @@ li{
     margin-top: 20px;
 }
 
+/*ESTILOS PÁGINA EJERCICIOS*/
+#ejercicios{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    color: #333;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('images/descarga.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+.contenedor-navegacion-ejercicios {
+    background-color: #1a1b25;
+    color: white;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    min-height: 500px;
+    min-width: 400px;
+    margin-bottom: 50px;
+}
+
+.input-navegacion-ejercicios{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.texto-cabecera-ejercicios{
+    background-color: #1a1b25;
+    font-style: italic;
+    font-size: 30px;
+    padding: 30px;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.contenedor-buscador-ejercicios{
+    width: 30%;
+    background: #25153f;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    bottom: 0;
+    border-radius: 10px 0px 0px 10px;
+}
+
+.texto-buscador-ejercicios{
+    color: #f0f2a6;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contenedor-contenido-ejercicios{
+    width: 70%;
+    margin-left: 20px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.contenedor-ejercicio-ejercicios{
+    background-color: #f0f2a6;
+    border-radius: 5px;
+    min-height: 75px;
+    min-width: 100px;
+    padding: 10px;
+    margin: 10px;
+    margin-top: 20px;
+}
+
 /*ESTILOS PÁGINA alimentación*/
+#alimentacion{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    color: #333;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('images/pngtree-collaboration-in-3d-a-rendered-illustration-of-successful-teamwork-image_3655127.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
 .contenedor-navegacion-alimentacion{
     background-color: #301014;
     color: white;
@@ -309,29 +497,44 @@ li{
 }
 
 /*ESTILOS Sobre Nosotros*/
-    .contenedor-excelencia-sobrenosotros{
-    background-color: #141414;
-    padding: 20px;
-    border-radius: 10px;
+#sobreNosotros{
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    border-collapse: collapse;
+    font-family: sans-serif;
+    color: #333;
+    flex-direction: column;
+    box-sizing: border-box;
+    background-image: url('images/95a1ad8e-2540-495b-9a8f-87fc86249caf_1080x1080.jpg');
+    background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
+    background-position: center center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+}
+
+.contenedor-excelencia-sobrenosotros{
+background-color: #141414;
+padding: 20px;
+border-radius: 10px;
+text-align: center;
+}
+.texto-excelencia-sobrenosotros{
+    font-size: 30px;
+    font-weight: bold;
+}
+.nombre {
+    margin-top: 10px;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
     text-align: center;
-    }
-    .texto-excelencia-sobrenosotros{
-        font-size: 30px;
-        font-weight: bold;
-    }
-    .nombre {
-        margin-top: 10px;
-        font-size: 30px;
-        font-weight: bold;
-        color: white;
-        text-align: center;
-    }
-    .mapa {
-      text-align: center;
-      margin: 20px;
-      margin-top: 30px;
-    }
-    .mapa iframe{
-        width: 1000px;
-        height: 650px;
-    }
+}
+.mapa {
+text-align: center;
+margin: 20px;
+margin-top: 30px;
+}
+.mapa iframe{
+    width: 1000px;
+    height: 650px;
+}

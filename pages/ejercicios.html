@@ -8,7 +8,7 @@
     <title>Ejercicios - Ataraxia</title>
 </head>
 
-<body>
+<body id="ejercicios">
 
     <header class="texto-cabecera-ejercicios">
         <h1>EJERCICIOS</h1>
@@ -58,10 +58,36 @@
 
 
     <footer>
-        <p>
-            In the temple of iron, where sweat is a prayer, each rep is a testament to the will of become more
-        </p>
-        &copy; 2025 Ataraxia - Todos los derechos reservados.
+        <div class="footer-left">
+            <h3>Formulario de Sugerencias</h3>
+            <form action="#" method="POST">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+    
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" required>
+    
+                <label for="email">Email de contacto:</label>
+                <input type="email" id="email" name="email" required>
+    
+                <label for="telefono">Teléfono de contacto:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+    
+                <label for="sugerencia">Tu Sugerencia:</label>
+                <textarea id="sugerencia" name="sugerencia" rows="4" required></textarea>
+    
+                <button type="submit">Enviar</button>
+                <button type="reset" id="resetButton">Borrar</button>
+            </form>
+        </div>
+    
+        <div class="footer-right">
+            <img src="imagenes/logo-ataraxia.jpg" alt="Logo de Ataraxia" class="footer-logo">
+            <div class="footer-links">
+                <a href="/sobre-nosotros" class="about-link">Sobre Nosotros</a>
+                <p>&copy; 2025 Ataraxia | Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 </body>
 
