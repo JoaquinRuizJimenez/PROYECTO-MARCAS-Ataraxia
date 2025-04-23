@@ -1,0 +1,263 @@
+[
+    {
+        "nombre": "Avena con proteina y fruta",
+        "ingredientes": ["avena","proteina en polvo","fruta (plátano, fresas, etc.)"],
+        "calorias": 333,
+        "proteinas": 30,
+        "carbohidratos": 46.1,
+        "grasas": 4.8,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Panqueques de avena y claras de huevo",
+        "ingredientes": ["avena","huevo","leche","fruta (opcional)","canela (opcional)","endulzante (opcional)"],
+        "calorias": 402,
+        "proteinas": 18.6,
+        "carbohidratos": 60.6,
+        "grasas": 10.5,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Tostada integral con aguacate y huevo",
+        "ingredientes": ["pan integral","aguacate","huevo (cocido o revuelto)","sal y pimienta"],
+        "calorias": 222,
+        "proteinas": 8.8,
+        "carbohidratos": 22.6,
+        "grasas": 12.4,
+        "dificultad": "Facil",
+        "tiempo": 5
+    },
+    {
+        "nombre": "Yogur griego con granola casera y chía",
+        "ingredientes": ["yogur griego","granola","semillas de chia"],
+        "calorias": 377,
+        "proteinas": 10.5,
+        "carbohidratos": 42,
+        "grasas": 19,
+        "dificultad": "Facil",
+        "tiempo": 5
+    },
+    {
+        "nombre": "Waffles de avena con proteína en polvo",
+        "ingredientes": ["avena","proteina en polvo","huevo","leche"],
+        "calorias": 336,
+        "proteinas": 35,
+        "carbohidratos": 30,
+        "grasas": 8,
+        "dificultad": "Intermedia",
+        "tiempo": 15
+    },
+    {
+        "nombre": "Arroz con pollo y verduras",
+        "ingredientes": ["arroz","pollo","verduras (zanahoria, brócoli, etc.)","especias (opcional)"],
+        "calorias": 404,
+        "proteinas": 51,
+        "carbohidratos": 48,
+        "grasas": 2,
+        "dificultad": "Facil",
+        "tiempo": 30
+    },
+    {
+        "nombre": "Salmon a la plancha con verduras",
+        "ingredientes": ["salmon","verduras (espinaca, brócoli, etc.)","aceite de oliva", "especias (opcional)"],
+        "calorias": 334,
+        "proteinas": 39,
+        "carbohidratos": 13,
+        "grasas": 16,
+        "dificultad": "Intermedia",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Ensalada de garbanzos y atún",
+        "ingredientes": ["garbanzos","atun","verduras (tomate, pepino, etc.)","aceite de oliva", "especias (opcional)"],
+        "calorias": 418,
+        "proteinas": 23.5,
+        "carbohidratos": 40.42,
+        "grasas": 15.61,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Pasta integral con salsa de tomate natural y pavo molido",
+        "ingredientes": ["pasta integral","salsa de tomate natural","pavo molido"],
+        "calorias": 472,
+        "proteinas": 38,
+        "carbohidratos": 35,
+        "grasas": 23,
+        "dificultad": "Facil",
+        "tiempo": 25
+    },
+    {
+        "nombre": "Ensalada mediterránea con pollo a la parrilla",
+        "ingredientes": ["pollo a la parrilla","lechuga","tomate","pepino","aceitunas","queso feta"],
+        "calorias": 425,
+        "proteinas": 35,
+        "carbohidratos": 10,
+        "grasas": 17.1,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Hamburguesas de lentejas y avena",
+        "ingredientes": ["lentejas","avena","cebolla","ajo","especias (opcional)"],
+        "calorias": 220,
+        "proteinas": 11,
+        "carbohidratos": 31.5,
+        "grasas": 5.6,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Hummus con bastones de zanahoria y pepino",
+        "ingredientes": ["hummus","zanahoria","pepino"],
+        "calorias": 180,
+        "proteinas": 4.3,
+        "carbohidratos": 14.2,
+        "grasas": 9.8,
+        "dificultad": "Facil",
+        "tiempo": 5
+    },
+    {
+        "nombre": "Ensalada mediterránea con pollo a la parrilla",
+        "ingredientes": ["pollo a la parrilla","lechuga","tomate","pepino","aceitunas","queso feta"],
+        "calorias": 425,
+        "proteinas": 35,
+        "carbohidratos": 10,
+        "grasas": 17.1,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Batido de proteína con mantequilla de maní",
+        "ingredientes": ["proteina en polvo","leche","mantequilla de cacahuete","platano"],
+        "calorias": 330,
+        "proteinas": 28.3,
+        "carbohidratos": 21,
+        "grasas": 9.5,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Tortilla con claras con espinacas y tomate",
+        "ingredientes": ["claras de huevo","espinacas","tomate","sal y pimienta"],
+        "calorias": 150,
+        "proteinas": 20,
+        "carbohidratos": 5,
+        "grasas": 5,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Ensalada de atún con huevo duro",
+        "ingredientes": ["atun","huevo duro","lechuga","tomate","aceitunas"],
+        "calorias": 350,
+        "proteinas": 35,
+        "carbohidratos": 7.9,
+        "grasas": 22.2,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Wrap de lechuga con pollo al limón",
+        "ingredientes": ["pollo","lechuga","limón","aguacate", "tortas de maíz"],
+        "calorias": 250,
+        "proteinas": 28,
+        "carbohidratos": 4,
+        "grasas": 8.9,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Ensalada templada de quinoa con pavo",
+        "ingredientes": ["quinoa","pavo","verduras (zanahoria, espinaca, etc.)","aceite de oliva"],
+        "calorias": 450,
+        "proteinas": 40,
+        "carbohidratos": 50,
+        "grasas": 10,
+        "dificultad": "Intermedia",
+        "tiempo": 30
+    },
+    {
+        "nombre": "Tacos de pescado con tortilla de maíz",
+        "ingredientes": ["pescado (tilapia, merluza, etc.)","tortilla de maíz","verduras (repollo, aguacate, etc.)"],
+        "calorias": 350,
+        "proteinas": 30,
+        "carbohidratos": 30,
+        "grasas": 10,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Pimientos rellenos de carne magra",
+        "ingredientes": ["pimientos","carne magra (pollo, pavo, etc.)","especias", "queso para gratinar", "salsa de tomate"],
+        "calorias": 300,
+        "proteinas": 27.8,
+        "carbohidratos": 10,
+        "grasas": 13.4,
+        "dificultad": "Intermedia",
+        "tiempo": 30
+    },
+    {
+        "nombre": "Mug cake proteico en microondas",
+        "ingredientes": ["harina de avena","proteina en polvo","huevo","leche (opcional)","chocolate (opcional)"],
+        "calorias": 270,
+        "proteinas": 28,
+        "carbohidratos": 9.1,
+        "grasas": 7.2,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Cheesecake de yogur griego sin horno",
+        "ingredientes": ["yogur griego","galletas integrales","queso crema light","miel","gelatina sin sabor"],
+        "calorias": 190,
+        "proteinas": 10,
+        "carbohidratos": 5.4,
+        "grasas": 5,
+        "dificultad": "Intermedia",
+        "tiempo": 25
+    },
+    {
+        "nombre": "Pudding de chía con cacao",
+        "ingredientes": ["semillas de chía","leche (o leche vegetal)","cacao en polvo","endulzante (opcional)"],
+        "calorias": 200,
+        "proteinas": 7.2,
+        "carbohidratos": 11.4,
+        "grasas": 10.3,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Arroz integral con huevo y verduras",
+        "ingredientes": ["arroz integral","huevo","verduras (zanahoria, brócoli, etc.)","salsa de soja (opcional)"],
+        "calorias": 350,
+        "proteinas": 15,
+        "carbohidratos": 50,
+        "grasas": 8,
+        "dificultad": "Facil",
+        "tiempo": 20
+    },
+    {
+        "nombre": "Pizza fit de tortilla integral",
+        "ingredientes": ["tortilla integral","salsa de tomate","queso bajo en grasa","verduras (pimiento, champiñones, etc.)", "pollo"],
+        "calorias": 360,
+        "proteinas": 33,
+        "carbohidratos": 9.1,
+        "grasas": 7.2,
+        "dificultad": "Facil",
+        "tiempo": 10
+    },
+    {
+        "nombre": "Galletas de avena y plátano",
+        "ingredientes": ["avena","plátano","mantequilla de maní (opcional)","chocolate (opcional)"],
+        "calorias": 150,
+        "proteinas": 3.5,
+        "carbohidratos": 27,
+        "grasas": 4.5,
+        "dificultad": "Facil",
+        "tiempo": 15
+    }
+
+]
