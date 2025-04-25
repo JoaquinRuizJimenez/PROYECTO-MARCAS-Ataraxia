@@ -36,10 +36,9 @@ li{
 
 header {
     text-align: center;
-    background-color: #2c3e50;
+    background-color: #20354b;
     color: white;
     padding: 30px 20px;
-    border-radius: 10px;
     margin-bottom: 30px;
 }
 
@@ -420,7 +419,7 @@ footer {
     color: #333;
     flex-direction: column;
     box-sizing: border-box;
-    background-image: url('images/pngtree-collaboration-in-3d-a-rendered-illustration-of-successful-teamwork-image_3655127.jpg');
+    background-image: url('images/istockphoto-1457433817-612x612.jpg');
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -500,17 +499,17 @@ footer {
     color: #333;
     flex-direction: column;
     box-sizing: border-box;
-    background-image: url('images/95a1ad8e-2540-495b-9a8f-87fc86249caf_1080x1080.jpg');
+    background-image: url('images/pngtree-collaboration-in-3d-a-rendered-illustration-of-successful-teamwork-image_3655127.jpg');
     background-size: cover; /* Asegura que la imagen cubra toda la pantalla */
     background-position: center center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
 .contenedor-excelencia-sobrenosotros{
-background-color: #141414;
+background-color: #20354b;
 padding: 20px;
-border-radius: 10px;
 text-align: center;
+color: white;
 }
 .texto-excelencia-sobrenosotros{
     font-size: 30px;
