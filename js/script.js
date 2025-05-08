@@ -6,7 +6,7 @@ const coleccion_ejercicios = "ejercicios";
 const coleccion_alimentos = "alimentos";
 
 //Esperamos a que el DOM esté completamente cargado para ejecutar el código
-document.addEventListener("DOMContentLoaded", () =>{
+document.addEventListener("DOMContentLoaded", () => {
 
     //Mensajes de salida
     const mensajesalidaRutina = document.getElementById("mensajesalidaRutina");
@@ -26,6 +26,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     const botonmostrartodosAlimentacion = document.getElementById("botonmostrartodosAlimentacion");             //Boton mostrar todos en Alimentacion
     const botonbuscarpornombreAlimentacion = document.getElementById("botonbuscarpornombreAlimentacion");   //Boton buscar por nombre en Alimentacion
     const botonbuscarporingredientesAlimentacion = document.getElementById("botonbuscarporingredientesAlimentacion");   //Boton buscar por ingredientes en Alimentacion
+    const botonbuscarpordificultadAlimentacion = document.getElementById("botonbuscarpordificultadAlimentacion");   //Boton buscar por dificultad en Alimentacion
     const botonmostrartodosEjercicios = document.getElementById("botonmostrartodosEjercicios");                 //Boton mostrar todos en Ejercicios
     const botonbuscarpornombreEjercicios = document.getElementById("botonbuscarpornombreEjercicios");           //Boton buscar por nombre en Ejercicios
     const botonbuscarpormusculoEjercicios = document.getElementById("botonbuscarpormusculoEjercicios");         //Boton buscar por musculo en Ejercicios
@@ -35,16 +36,43 @@ document.addEventListener("DOMContentLoaded", () =>{
     *
     *   FUNCIONALIDAD DE LOS BOTONES DE RUTINA
     *
-    */ 
+    */
 
-    function mostrarTodosRutina(rutina) {
-        
+
+    async function consultarRutinas(filtro = "todos", valor = "") {             //Esta función obtiene los datos del JSON en funcion de 
+        //si se ha incluido un filtro o no
+        try {
+
+            let url = `http://localhost:${PORT}/${coleccion_rutina}`
+
+            //Si el filtro tiene un valor nombre, buscará por nombre
+            if (filtro === "nombre") {
+                url += `?nombre=${encodeURIComponent(valor)}`
+            }
+
+
+            const respuesta = await fetch(url);
+            const rutina = await respuesta.json();
+
+
+            mostrarRutina(rutina);
+
+        } catch (error) {
+            console.error("Error en la consulta de las rutinas", error);
+            mensajesalidaRutina.innerHTML = `<p>Error en la consulta de rutinas: ${error}</p>`
+        }
+
+    }
+
+
+    function mostrarRutina(rutina) {
+
         if (rutina.length === 0) {
             console.log("No hay rutinas en la BD");
             return;
         }
 
-        rutina.forEach(rutina =>{
+        rutina.forEach(rutina => {
 
             let div = document.createElement("div");                //Creamos el div y le damos los datos
             div.classList.add("contenedor-ejercicio-rutinas");
@@ -55,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () =>{
             mensajesalidaRutina.appendChild(div);                   //Introducimos el div
         })
 
-        
+
 
     }
 
@@ -65,9 +93,38 @@ document.addEventListener("DOMContentLoaded", () =>{
     *
     *   FUNCIONALIDAD DE LOS BOTONES DE EJERCICIOS
     *
-    */ 
+    */
 
-    function mostrarTodosEjercicios(ejercicios){
+    async function consultarEjercicios(filtro = "todos", valor = "") {                 //Esta función obtiene los datos del JSON en funcion de 
+        //si se ha incluido un filtro o no
+        try {
+
+            let url = `http://localhost:${PORT}/${coleccion_ejercicios}`
+
+            //Si el filtro tiene un valor nombre, buscará por nombre
+            if (filtro === "nombre") {
+                url += `?nombre=${encodeURIComponent(valor)}`
+            } else if (filtro === "musculo") {
+                let musculosArray = valor.split(",").map(musculo => musculo.trim()); //Separamos los músculos por comas y eliminamos los espacios
+                url += `?musculo=${encodeURIComponent(JSON.stringify(musculosArray))}` //Convertimos el array a JSON para que lo entienda el servidor
+            }
+
+
+            const respuesta = await fetch(url);
+            const ejercicios = await respuesta.json();
+
+
+            mostrarEjercicios(ejercicios);
+
+        } catch (error) {
+            console.error("Error en la consulta de las ejercicios", error);
+            mensajesalidaEjercicios.innerHTML = `<p>Error en la consulta de ejercicios: ${error}</p>`
+        }
+
+    }
+
+
+    function mostrarEjercicios(ejercicios) {
 
         if (ejercicios.length === 0) {
             console.log("No hay ejercicios en la BD");
@@ -83,7 +140,7 @@ document.addEventListener("DOMContentLoaded", () =>{
                              <p>Duracion: <span>${ejercicios.Series}</span></p>
                              <p>Descripción: <span>${ejercicios.Repeticiones}</span></p>
                              <p>Descanso: <span>${ejercicios.Descanso}</span> minutos</p>`
-            mensajesalidaEjercicios.appendChild(div);  
+            mensajesalidaEjercicios.appendChild(div);
 
         })
 
@@ -95,10 +152,40 @@ document.addEventListener("DOMContentLoaded", () =>{
     *
     *   FUNCIONALIDAD DE LOS BOTONES DE ALIMENTACION
     *
-    */ 
+    */
+
+    async function consultarAlimentos(filtro = "todos", valor = "") {                 //Esta función obtiene los datos del JSON en funcion de 
+                                                                                        //si se ha incluido un filtro o no
+        try {
+
+            let url = `http://localhost:${PORT}/${coleccion_alimentos}`
+
+            
+            if (filtro === "nombre") {
+                url += `?nombre=${encodeURIComponent(valor)}`
+            } else if (filtro === "ingredientes") {
+                let  = valor.split(",").map(musculo => musculo.trim());         //Separamos los músculos por comas y eliminamos los espacios
+                url += `?musculo=${encodeURIComponent(JSON.stringify())}`       //Convertimos el array a JSON para que lo entienda el servidor
+            } else if (filtro === "dificultad"){
+                url += `?dificultad=${encodeURIComponent(valor)}`
+            }
 
 
-    function mostrarTodosAlimentacion(alimentos){
+            const respuesta = await fetch(url);
+            const alimentos = await respuesta.json();
+
+
+            mostrarAlimentacion(alimentos);
+
+        } catch (error) {
+            console.error("Error en la consulta de los alimentos", error);
+            mensajesalidaAlimentacion.innerHTML = `<p>Error en la consulta de los alimentos: ${error}</p>`
+        }
+
+    }
+
+
+    function mostrarAlimentacion(alimentos) {
 
         if (alimentos.length === 0) {
             console.log("No hay alimentos en la BD");
@@ -106,28 +193,47 @@ document.addEventListener("DOMContentLoaded", () =>{
         }
 
         alimentos.forEach(alimentos => {
-            
+
             let div = document.createElement("div");                //Creamos el div y le damos los datos
             div.classList.add("contenedor-receta-alimentacion");
-            div.innerHTML = `<p>Nombre: <span>${ejercicios.Nombre}</span></p>
-                             <p>Ingredientes: <span>${ejercicios.GrupoMuscular}</span></p>
-                             <p>Calorias: <span>${ejercicios.Series}</span></p>
-                             <p>Proteinas: <span>${ejercicios.Repeticiones}</span>g.</p>
-                             <p>Carbohidratos: <span>${ejercicios.Descanso}</span>g.</p>
-                             <p>Grasas: <span>${ejercicios.Descanso}</span>g.</p>
-                             <p>Dificultad: <span>${ejercicios.Descanso}</span> </p>
-                             <p>Carbohidratos: <span>${ejercicios.Descanso}</span> minutos.</p>`
-            
+            div.innerHTML = `<p>Nombre: <span>${alimentos.nombre}</span></p>
+                             <p>Ingredientes: <span>${alimentos.ingredientes}</span></p>
+                             <p>Calorias: <span>${alimentos.calorias}</span></p>
+                             <p>Proteinas: <span>${alimentos.proteinas}</span>g.</p>
+                             <p>Carbohidratos: <span>${alimentos.carbohidratos}</span>g.</p>
+                             <p>Grasas: <span>${alimentos.grasas}</span>g.</p>
+                             <p>Dificultad: <span>${alimentos.dificultad}</span> </p>
+                             <p>Tiempo: <span>${alimentos.tiempo}</span> minutos.</p>`
+
             mensajesalidaAlimentacion.appendChild(div);
         })
 
     }
-    
 
-    botonmostrartodosRutinas.addEventListener("click", () => mostrarTodosRutina);
-    botonmostrartodosEjercicios.addEventListener("click", () => mostrarTodosEjercicios);
-    botonmostrartodosAlimentacion.addEventListener("click", () => mostrarTodosAlimentacion);
+
+    /*
+    *
+    *   FUNCIONALIDAD DE LOS BOTONES DE BUSQUEDA
+    *
+    * * Son necesarios los '.addEventListener' para que se se puedan aplicar los filtros correctamente
+    */ 
+
+
+    //BOTONES DE RUTINAS
+    botonmostrartodosRutinas.addEventListener("click", () => mostrarRutina);
+    botonbuscarpornombreRutinas.addEventListener("click", () => mostrarRutina(buscarpornombreRutina.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
     
+    //BOTONES DE EJERCICIOS
+    botonmostrartodosEjercicios.addEventListener("click", () => mostrarEjercicios);
+    botonbuscarpornombreEjercicios.addEventListener("click", () => mostrarEjercicios(buscarpornombreEjercicios.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
+    botonbuscarpormusculoEjercicios.addEventListener("click", () => mostrarEjercicios(buscarpormusculoEjercicios.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
+    
+    //BOTONES DE ALIMENTACION
+    botonmostrartodosAlimentacion.addEventListener("click", () => mostrarAlimentacion());
+    botonbuscarporingredientesAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarporingredienteAlimentacion.value)); 
+    botonbuscarpornombreAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarpornombreAlimentacion.value));
+    botonbuscarpordificultadAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarpordificultadAlimentacion.value));
+
 
 
 
