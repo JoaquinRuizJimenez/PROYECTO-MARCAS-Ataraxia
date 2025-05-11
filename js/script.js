@@ -197,7 +197,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let div = document.createElement("div");                //Creamos el div y le damos los datos
             div.classList.add("contenedor-receta-alimentacion");
             div.innerHTML = `<p>Nombre: <span>${alimentos.nombre}</span></p>
-                             <p>Ingredientes: <span>${alimentos.ingredientes}</span></p>
+                             <p>Ingredientes: <span>${alimentos.ingredientes ? alimentos.ingredientes.join("") : "N/A"}</span></p>
                              <p>Calorias: <span>${alimentos.calorias}</span></p>
                              <p>Proteinas: <span>${alimentos.proteinas}</span>g.</p>
                              <p>Carbohidratos: <span>${alimentos.carbohidratos}</span>g.</p>
@@ -220,19 +220,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     //BOTONES DE RUTINAS
-    botonmostrartodosRutinas.addEventListener("click", () => mostrarRutina);
-    botonbuscarpornombreRutinas.addEventListener("click", () => mostrarRutina(buscarpornombreRutina.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
+    botonmostrartodosRutinas.addEventListener("click", () => consultarRutinas);
+    botonbuscarpornombreRutinas.addEventListener("click", () => consultarRutinas(buscarpornombreRutina.value.trim())); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
     
     //BOTONES DE EJERCICIOS
-    botonmostrartodosEjercicios.addEventListener("click", () => mostrarEjercicios);
-    botonbuscarpornombreEjercicios.addEventListener("click", () => mostrarEjercicios(buscarpornombreEjercicios.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
-    botonbuscarpormusculoEjercicios.addEventListener("click", () => mostrarEjercicios(buscarpormusculoEjercicios.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
+    botonmostrartodosEjercicios.addEventListener("click", () => consultarEjercicios);
+    botonbuscarpornombreEjercicios.addEventListener("click", () => consultarEjercicios(buscarpornombreEjercicios.value.trim())); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
+    botonbuscarpormusculoEjercicios.addEventListener("click", () => consultarEjercicios(buscarpormusculoEjercicios.value.trim())); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
     
     //BOTONES DE ALIMENTACION
-    botonmostrartodosAlimentacion.addEventListener("click", () => mostrarAlimentacion());
-    botonbuscarporingredientesAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarporingredienteAlimentacion.value)); 
-    botonbuscarpornombreAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarpornombreAlimentacion.value));
-    botonbuscarpordificultadAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarpordificultadAlimentacion.value));
+    botonmostrartodosAlimentacion.addEventListener("click", () => consultarAlimentos());
+    botonbuscarporingredientesAlimentacion.addEventListener("click", () => consultarAlimentos(buscarporingredienteAlimentacion.value.trim())); 
+    botonbuscarpornombreAlimentacion.addEventListener("click", () => consultarAlimentos(buscarpornombreAlimentacion.value.trim()));
+    botonbuscarpordificultadAlimentacion.addEventListener("click", () => consultarAlimentos(buscarpordificultadAlimentacion.value.trim()));
 
 
 
