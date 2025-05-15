@@ -1,7 +1,7 @@
 //Constantes iniciales
 
 const PORT = 3000;
-const coleccion_rutina = "rutina";
+const coleccion_rutina = "rutinas";
 const coleccion_ejercicios = "ejercicios";
 const coleccion_alimentos = "alimentos";
 
@@ -18,7 +18,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const buscarpornombreEjercicios = document.getElementById("buscarpornombreEjercicios");                 //Input buscar por nombre en Ejercicios
     const buscarpormusculoEjercicios = document.getElementById("buscarpormusculoEjercicios");               //Input buscar por músculo en Ejercicios
     const buscarpornombreAlimentacion = document.getElementById("buscarpornombreAlimentacion");             //Input buscar por nombre en Alimentacion
-    const buscarporingredienteAlimentacion = document.getElementById("buscaringredientesAlimentacion")      //Input buscar por ingredientes Alimentacion
+    const buscarporingredientesAlimentacion = document.getElementById("buscarporingredientesAlimentacion")      //Input buscar por ingredientes Alimentacion
+    const buscarpordificultadAlimentacion = document.getElementById("buscardificultadAlimentacion")          //Input buscar por dificultad Alimentacion
 
     //Botones para la búsqueda
     const botonmostrartodosRutinas = document.getElementById("botonmostrartodosRutinas");                     //Boton mostrar todos en Rutinas
@@ -52,8 +53,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
             const respuesta = await fetch(url);
+            if (!respuesta.ok) {
+                throw new Error(`Error en la respuesta: ${respuesta.status}`);
+            }
             const rutina = await respuesta.json();
-
+            console.log('Rutina:', rutina);
 
             mostrarRutina(rutina);
 
@@ -66,6 +70,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function mostrarRutina(rutina) {
+
+        mensajesalidaRutina.innerHTML = ""; // Limpiamos el contenedor de mensajes
 
         if (rutina.length === 0) {
             console.log("No hay rutinas en la BD");
@@ -102,15 +108,18 @@ document.addEventListener("DOMContentLoaded", () => {
             let url = `http://localhost:${PORT}/${coleccion_ejercicios}`
 
             //Si el filtro tiene un valor nombre, buscará por nombre
-            if (filtro === "nombre") {
-                url += `?nombre=${encodeURIComponent(valor)}`
-            } else if (filtro === "musculo") {
+            if (filtro === "Nombre") {
+                url += `?Nombre=${encodeURIComponent(valor)}`
+            } else if (filtro === "GrupoMuscular") {
                 let musculosArray = valor.split(",").map(musculo => musculo.trim()); //Separamos los músculos por comas y eliminamos los espacios
-                url += `?musculo=${encodeURIComponent(JSON.stringify(musculosArray))}` //Convertimos el array a JSON para que lo entienda el servidor
+                url += `?GrupoMuscular=${encodeURIComponent(JSON.stringify(musculosArray))}` //Convertimos el array a JSON para que lo entienda el servidor
             }
 
 
             const respuesta = await fetch(url);
+            if (!respuesta.ok) {
+                throw new Error(`Error en la respuesta: ${respuesta.status}`);
+            }
             const ejercicios = await respuesta.json();
 
 
@@ -125,6 +134,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function mostrarEjercicios(ejercicios) {
+
+        mensajesalidaEjercicios.innerHTML = ""; // Limpiamos el contenedor de mensajes
 
         if (ejercicios.length === 0) {
             console.log("No hay ejercicios en la BD");
@@ -164,14 +175,18 @@ document.addEventListener("DOMContentLoaded", () => {
             if (filtro === "nombre") {
                 url += `?nombre=${encodeURIComponent(valor)}`
             } else if (filtro === "ingredientes") {
-                let  = valor.split(",").map(musculo => musculo.trim());         //Separamos los músculos por comas y eliminamos los espacios
-                url += `?musculo=${encodeURIComponent(JSON.stringify())}`       //Convertimos el array a JSON para que lo entienda el servidor
+                valor = valor.toLowerCase().trim()
+                let ingredientesArray =  valor.split(",").map(ingredientes => ingredientes.trim());         //Separamos los músculos por comas y eliminamos los espacios
+                url += `?ingredientes=${encodeURIComponent(ingredientesArray.join(","))}`;       //Convertimos el array a JSON para que lo entienda el servidor
             } else if (filtro === "dificultad"){
                 url += `?dificultad=${encodeURIComponent(valor)}`
             }
 
 
             const respuesta = await fetch(url);
+            if (!respuesta.ok) {
+                throw new Error(`Error en la respuesta: ${respuesta.status}`);
+            }
             const alimentos = await respuesta.json();
 
 
@@ -186,6 +201,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function mostrarAlimentacion(alimentos) {
+
+        mensajesalidaAlimentacion.innerHTML = ""; // Limpiamos el contenedor de mensajes
 
         if (alimentos.length === 0) {
             console.log("No hay alimentos en la BD");
@@ -219,21 +236,38 @@ document.addEventListener("DOMContentLoaded", () => {
     */ 
 
 
-    //BOTONES DE RUTINAS
-    botonmostrartodosRutinas.addEventListener("click", () => mostrarRutina);
-    botonbuscarpornombreRutinas.addEventListener("click", () => mostrarRutina(buscarpornombreRutina.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
-    
-    //BOTONES DE EJERCICIOS
-    botonmostrartodosEjercicios.addEventListener("click", () => mostrarEjercicios);
-    botonbuscarpornombreEjercicios.addEventListener("click", () => mostrarEjercicios(buscarpornombreEjercicios.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
-    botonbuscarpormusculoEjercicios.addEventListener("click", () => mostrarEjercicios(buscarpormusculoEjercicios.value)); //Llamamos a la función de buscar por nombre y le pasamos el valor del input
-    
-    //BOTONES DE ALIMENTACION
-    botonmostrartodosAlimentacion.addEventListener("click", () => mostrarAlimentacion());
-    botonbuscarporingredientesAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarporingredienteAlimentacion.value)); 
-    botonbuscarpornombreAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarpornombreAlimentacion.value));
-    botonbuscarpordificultadAlimentacion.addEventListener("click", () => mostrarAlimentacion(buscarpordificultadAlimentacion.value));
+   // BOTONES DE RUTINAS
+if (botonmostrartodosRutinas) {
+    botonmostrartodosRutinas.addEventListener("click", () => consultarRutinas());
+}
+if (botonbuscarpornombreRutinas) {
+    botonbuscarpornombreRutinas.addEventListener("click", () => consultarRutinas("nombre", buscarpornombreRutina.value));
+}
 
+// BOTONES DE EJERCICIOS
+if (botonmostrartodosEjercicios) {
+    botonmostrartodosEjercicios.addEventListener("click", () => consultarEjercicios());
+}
+if (botonbuscarpornombreEjercicios) {
+    botonbuscarpornombreEjercicios.addEventListener("click", () => consultarEjercicios("nombre", buscarpornombreEjercicios.value));
+}
+if (botonbuscarpormusculoEjercicios) {
+    botonbuscarpormusculoEjercicios.addEventListener("click", () => consultarEjercicios("musculo", buscarpormusculoEjercicios.value));
+}
+
+// BOTONES DE ALIMENTACIÓN
+if (botonmostrartodosAlimentacion) {
+    botonmostrartodosAlimentacion.addEventListener("click", () => consultarAlimentos());
+}
+if (botonbuscarporingredientesAlimentacion) {
+    botonbuscarporingredientesAlimentacion.addEventListener("click", () => consultarAlimentos("ingredientes", buscarporingredientesAlimentacion.value));
+}
+if (botonbuscarpornombreAlimentacion) {
+    botonbuscarpornombreAlimentacion.addEventListener("click", () => consultarAlimentos("nombre", buscarpornombreAlimentacion.value));
+}
+if (botonbuscarpordificultadAlimentacion) {
+    botonbuscarpordificultadAlimentacion.addEventListener("click", () => consultarAlimentos("dificultad", buscarpordificultadAlimentacion.value));
+}
 
 
 
