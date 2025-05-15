@@ -13,13 +13,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const mensajesalidaEjercicios = document.getElementById("mensajesalidaEjercicios");
     const mensajesalidaAlimentacion = document.getElementById("mensajesalidaAlimentacion");
 
-    // Constantes de las búsquedas por cada cosa
-    const buscarpornombreRutina = document.getElementById("buscarpornombreRutinas");                        //Input buscar por nombre en Rutinas  
-    const buscarpornombreEjercicios = document.getElementById("buscarpornombreEjercicios");                 //Input buscar por nombre en Ejercicios
-    const buscarpormusculoEjercicios = document.getElementById("buscarpormusculoEjercicios");               //Input buscar por músculo en Ejercicios
-    const buscarpornombreAlimentacion = document.getElementById("buscarpornombreAlimentacion");             //Input buscar por nombre en Alimentacion
-    const buscarporingredientesAlimentacion = document.getElementById("buscarporingredientesAlimentacion")      //Input buscar por ingredientes Alimentacion
-    const buscarpordificultadAlimentacion = document.getElementById("buscardificultadAlimentacion")          //Input buscar por dificultad Alimentacion
+    // Constantes de los inputs de búsquedas por cada cosa
+    const buscarpornombreRutina = document.getElementById("buscarpornombreRutinas").value;                        //Input buscar por nombre en Rutinas  
+    const buscarpornombreEjercicios = document.getElementById("buscarpornombreEjercicios").value;                 //Input buscar por nombre en Ejercicios
+    const buscarpormusculoEjercicios = document.getElementById("buscarpormusculoEjercicios").value;               //Input buscar por músculo en Ejercicios
+    const buscarpornombreAlimentacion = document.getElementById("buscarpornombreAlimentacion").value;             //Input buscar por nombre en Alimentacion
+    const buscarporingredientesAlimentacion = document.getElementById("buscarporingredientesAlimentacion").value;      //Input buscar por ingredientes Alimentacion
+    const buscarpordificultadAlimentacion = document.getElementById("buscardificultadAlimentacion").value;          //Input buscar por dificultad Alimentacion
 
     //Botones para la búsqueda
     const botonmostrartodosRutinas = document.getElementById("botonmostrartodosRutinas");                     //Boton mostrar todos en Rutinas
@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
         //si se ha incluido un filtro o no
         try {
 
+            
             let url = `http://localhost:${PORT}/${coleccion_rutina}`
 
             //Si el filtro tiene un valor nombre, buscará por nombre
@@ -51,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 url += `?nombre=${encodeURIComponent(valor)}`
             }
 
-
+            console.log('URL de la consulta:', url);
             const respuesta = await fetch(url);
             if (!respuesta.ok) {
                 throw new Error(`Error en la respuesta: ${respuesta.status}`);
@@ -115,6 +116,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 url += `?GrupoMuscular=${encodeURIComponent(JSON.stringify(musculosArray))}` //Convertimos el array a JSON para que lo entienda el servidor
             }
 
+            console.log('URL de la consulta:', url);
+            console.log('Valor de la consulta:', valor);
 
             const respuesta = await fetch(url);
             if (!respuesta.ok) {
@@ -147,7 +150,7 @@ document.addEventListener("DOMContentLoaded", () => {
             let div = document.createElement("div");                //Creamos el div y le damos los datos
             div.classList.add("contenedor-ejercicio-ejercicios");
             div.innerHTML = `<p>Nombre: <span>${ejercicios.Nombre}</span></p>
-                             <p>Dias/Semana: <span>${ejercicios.GrupoMuscular}</span></p>
+                             <p>Musculos: <span>${ejercicios.GrupoMuscular}</span></p>
                              <p>Duracion: <span>${ejercicios.Series}</span></p>
                              <p>Descripción: <span>${ejercicios.Repeticiones}</span></p>
                              <p>Descanso: <span>${ejercicios.Descanso}</span> minutos</p>`
@@ -241,7 +244,11 @@ if (botonmostrartodosRutinas) {
     botonmostrartodosRutinas.addEventListener("click", () => consultarRutinas());
 }
 if (botonbuscarpornombreRutinas) {
-    botonbuscarpornombreRutinas.addEventListener("click", () => consultarRutinas("nombre", buscarpornombreRutina.value));
+    botonbuscarpornombreRutinas.addEventListener("click", () => {
+        console.log("Buscando por nombre: ", buscarpornombreRutina.value);
+        consultarRutinas("nombre", buscarpornombreRutina.value)
+    }
+);
 }
 
 // BOTONES DE EJERCICIOS

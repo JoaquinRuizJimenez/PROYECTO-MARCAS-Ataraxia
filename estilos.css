@@ -315,6 +315,7 @@ footer {
     align-items: center;
 }
 .contenedor-ejercicio-rutinas{
+    color: black;
     background-color: #A9BCD0;
     border-radius: 5px;
     min-height: 75px;
@@ -322,6 +323,26 @@ footer {
     padding: 10px;
     margin: 10px;
     margin-top: 20px;
+}
+.boton-mostrarTodos-rutinas{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton-buscarNombre-rutinas{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*ESTILOS PÁGINA EJERCICIOS*/
@@ -401,12 +422,43 @@ footer {
 }
 .contenedor-ejercicio-ejercicios{
     background-color: #f0f2a6;
+    color: black;
     border-radius: 5px;
     min-height: 75px;
     min-width: 100px;
     padding: 10px;
     margin: 10px;
     margin-top: 20px;
+}
+.boton-mostrarTodos-ejercicios{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton-buscarNombre-ejercicios{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton-buscarMusculos-ejercicios{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*ESTILOS PÁGINA alimentación*/
@@ -487,6 +539,46 @@ footer {
     padding: 10px;
     margin: 10px;
     margin-top: 20px;
+}
+.boton-mostrarTodos-alimentacion{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton-buscarNombre-alimentacion{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton-buscarIngredientes-alimentacion{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+}
+.boton-buscarDificultad-alimentacion{
+    background-color: #15406b;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /*ESTILOS Sobre Nosotros*/

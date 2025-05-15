@@ -44,23 +44,16 @@ app.get("/rutinas", async (req, res) => {
     try{
         const db = await conectarBD();
         let filtro = {};
-        const rutinas = await db.rutinas.find(filtro).toArray(); // Buscamos las rutinas en la colección
-        let diasSemana;
-
-        console.log("Rutinas encontradas:", rutinas.length);
-        console.log("Rutinas:", rutinas);
-
 
         if (req.query.nombre) {
             filtro.nombre = {$regex: req.query.nombre, $options: 'i' }; // Búsqueda por nombre indiferente a mayúsculas y minúsculas
         } 
         
-        if (req.query.diasSemana){
-            diasSemana = parseInt(req.query.diasSemana, 10);
-        } if (!isNaN(diasSemana)) {
-            filtro.diasSemana = diasSemana; // Búsqueda por días de la semana
-        }
 
+        const rutinas = await db.rutinas.find(filtro).toArray(); // Buscamos las rutinas en la colección
+
+        console.log("Rutinas encontradas:", rutinas.length);
+        console.log("Rutinas:", rutinas);
 
 
         res.json(rutinas); // Devolvemos las rutinas como respuesta en formato JSON
@@ -83,15 +76,18 @@ app.get("/ejercicios", async (req, res) => {
     try{
         const db = await conectarBD();
         let filtro = {};
-        const ejercicios = await db.ejercicios.find(filtro).toArray(); // Buscamos los ejercicios en la colección
 
         if (req.query.nombre) {
-            filtro.nombre = {$regex: req.query.nombre, $options: 'i' }; // Búsqueda por nombre indiferente a mayúsculas y minúsculas
+            filtro.Nombre = {$regex: req.query.nombre, $options: 'i' }; // Búsqueda por nombre indiferente a mayúsculas y minúsculas
         } else if (req.query.GrupoMuscular){
             const grupoMuscularArray = req.query.GrupoMuscular.split(",").map(m => m.trim());
             filtro.grupoMuscular = {$in: grupoMuscularArray}; // Búsqueda por grupo muscular
         }
 
+        const ejercicios = await db.ejercicios.find(filtro).toArray(); // Buscamos los ejercicios en la colección
+
+        console.log("Ejercicios encontrados:", ejercicios.length);
+        console.log("Ejercicios:", ejercicios);
 
 
         res.json(ejercicios); // Devolvemos los ejercicios como respuesta en formato JSON
@@ -113,7 +109,7 @@ app.get("/alimentos", async (req, res) => {
     try{
         const db = await conectarBD();
         let filtro = {};
-        const alimentos = await db.alimentos.find(filtro).toArray(); // Buscamos los alimentos en la colección
+    
 
         if (req.query.nombre) {
             filtro.nombre = {$regex: req.query.nombre, $options: 'i' }; // Búsqueda por nombre indiferente a mayúsculas y minúsculas
@@ -124,7 +120,7 @@ app.get("/alimentos", async (req, res) => {
             filtro.dificultad = {$regex: req.query.dificultad, $options: 'i'} // Búsqueda por dificultad
         }
 
-
+        const alimentos = await db.alimentos.find(filtro).toArray(); // Buscamos los alimentos en la colección
 
         res.json(alimentos); // Devolvemos los alimentos como respuesta en formato JSON
 
