@@ -324,6 +324,9 @@ footer {
     margin: 10px;
     margin-top: 20px;
 }
+.contenedor-ejercicio-rutinas:hover{
+    font-weight: bold;
+}
 .boton-mostrarTodos-rutinas{
     background-color: #15406b;
     color: white;
@@ -430,6 +433,9 @@ footer {
     margin: 10px;
     margin-top: 20px;
 }
+.contenedor-ejercicio-ejercicios:hover{
+    font-weight: bold;
+}
 .boton-mostrarTodos-ejercicios{
     background-color: #15406b;
     color: white;
@@ -532,13 +538,17 @@ footer {
     align-items: center;
 }
 .contenedor-receta-alimentacion{
-    background-color: #79B791;
+    background-color: #51291E;
     border-radius: 5px;
     min-height: 75px;
     min-width: 100px;
     padding: 10px;
     margin: 10px;
     margin-top: 20px;
+    overflow-wrap:break-word;
+}
+.contenedor-receta-alimentacion:hover{
+    font-weight: bold;
 }
 .boton-mostrarTodos-alimentacion{
     background-color: #15406b;

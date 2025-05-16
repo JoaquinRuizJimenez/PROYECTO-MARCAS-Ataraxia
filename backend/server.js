@@ -81,7 +81,7 @@ app.get("/ejercicios", async (req, res) => {
             filtro.Nombre = {$regex: req.query.nombre, $options: 'i' }; // Búsqueda por nombre indiferente a mayúsculas y minúsculas
         } else if (req.query.GrupoMuscular){
             const grupoMuscularArray = req.query.GrupoMuscular.split(",").map(m => m.trim());
-            filtro.grupoMuscular = {$in: grupoMuscularArray}; // Búsqueda por grupo muscular
+            filtro.GrupoMuscular = {$in: grupoMuscularArray}; // Búsqueda por grupo muscular
         }
 
         const ejercicios = await db.ejercicios.find(filtro).toArray(); // Buscamos los ejercicios en la colección
