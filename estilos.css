@@ -633,3 +633,73 @@ margin-top: 30px;
     width: 1000px;
     height: 650px;
 }
+
+/*
+    ESTILOS DE LA PAGINA DE REIR ES SALUD
+*/
+.body-RieteUnPoco{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background-color: #F4F4F4;
+    flex-direction: column;
+    line-height: 1.6;
+    border-collapse: collapse;
+    min-height: 100vh;
+}
+
+.main-RieteUnPoco{
+    flex: 1;
+    min-height: 100vh;
+    background-color: white;
+    padding:  0 2rem 2rem 2rem;
+}
+.contenedorChiste{
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #DDD;
+    background-color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    min-height: 50px;
+    text-align: center;
+    justify-content: center;
+    margin-top: 150px;
+    color: white;
+}
+.contenedorBoton-RieteUnPoco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.botonMostrarChiste-RieteUnPoco{
+    background-color: #007BFF;
+    color: white;
+    border: 0;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.footer-RieteUnPoco{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 10px; 
+    background-color: #2c3e50;
+    color: white;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    height: auto; 
+}
+.contenedorImagenes-RieteUnPoco{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 75px;
+}
+.imagenChuckNorris-RieteUnPoco{
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 1rem;
+}

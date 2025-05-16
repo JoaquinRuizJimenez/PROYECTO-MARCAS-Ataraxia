@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const mensajesalidaRutina = document.getElementById("mensajesalidaRutina");
     const mensajesalidaEjercicios = document.getElementById("mensajesalidaEjercicios");
     const mensajesalidaAlimentacion = document.getElementById("mensajesalidaAlimentacion");
+    const chiste = document.getElementById("chiste");
 
     // Inputs
     const buscarpornombreRutina = document.getElementById("buscarpornombreRutinas");
@@ -28,6 +29,37 @@ document.addEventListener("DOMContentLoaded", () => {
     const botonmostrartodosEjercicios = document.getElementById("botonmostrartodosEjercicios");
     const botonbuscarpornombreEjercicios = document.getElementById("botonbuscarpornombreEjercicios");
     const botonbuscarpormusculoEjercicios = document.getElementById("botonbuscarpormusculoEjercicios");
+    const botonChiste = document.getElementById("botonMostrarChiste");
+
+
+    /*
+        FUNCIONALIDAD DE LA PAGINA DE RIETE UN POCO
+    */ 
+
+
+   
+
+    function mostrarChiste(){
+
+        botonChiste.disabled = true;                                                    
+        botonChiste.textContent = "Echa el freno madaleno...";
+
+        fetch("https://api.chucknorris.io/jokes/random")
+        .then(response => response.json())
+        .then(data => {
+            chiste.textContent = data.value;
+        })
+        .catch(error => {                                                   
+            chiste.textContent = "Error al obtener chiste.";
+        })
+        .finally(() => {                                                    
+            botonChiste.disabled = false;
+            botonChiste.textContent = "Mostrar chiste";
+        });
+
+    }
+
+
 
     // RUTINAS
     async function consultarRutinas(filtro = "todos", valor = "") {
@@ -68,8 +100,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 url += `?nombre=${encodeURIComponent(valor)}`;
             } else if (filtro === "GrupoMuscular") {
                 const musculosArray = valor.split(",").map(m => m.trim());
-                url += musculosArray.map(musculo => `?GrupoMuscular=${encodeURIComponent(musculo)}`).join("&");
-            }
+                url += `?GrupoMuscular=${encodeURIComponent(musculosArray.join(","))}`;
+            } 
             console.log(url);
             const respuesta = await fetch(url);
             if (!respuesta.ok) throw new Error(`Error: ${respuesta.status}`);
@@ -180,6 +212,13 @@ document.addEventListener("DOMContentLoaded", () => {
     if (botonbuscarpordificultadAlimentacion && buscarpordificultadAlimentacion) {
         botonbuscarpordificultadAlimentacion.addEventListener("click", () => {
             consultarAlimentos("dificultad", buscarpordificultadAlimentacion.value.trim());
+        });
+    }
+
+
+    if (botonChiste) {
+        botonChiste.addEventListener("click", () => {
+            mostrarChiste();
         });
     }
 
